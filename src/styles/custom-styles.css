@@ -9,3 +9,10 @@
 .btn-dark {
   border: 1px solid #ffffff !important;
 }
+
+.shopping-cart {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

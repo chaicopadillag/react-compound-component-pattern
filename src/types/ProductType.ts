@@ -1,4 +1,5 @@
 import { CSSProperties, FC, ReactElement } from 'react';
+import { OnChangeCardType } from './CartType';
 
 export type ProductType = {
   id: string;
@@ -13,6 +14,8 @@ export type CardProductProps = {
   children: ReactElement | ReactElement[];
   className?: string;
   style?: CSSProperties;
+  onChange?: (prop: OnChangeCardType) => void;
+  count?: number;
 };
 
 export type ProductNameProps = {
