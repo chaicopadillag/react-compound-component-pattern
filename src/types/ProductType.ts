@@ -1,3 +1,5 @@
+import { CSSProperties, FC, ReactElement } from 'react';
+
 export type ProductType = {
   id: string;
   name: string;
@@ -6,13 +8,25 @@ export type ProductType = {
   description?: string;
 };
 
-export type CardProps = {
+export type CardProductProps = {
   product: ProductType;
-  children: React.ReactNode;
+  children: ReactElement | ReactElement[];
+  className?: string;
+  style?: CSSProperties;
 };
 
-export type ProductCardType = React.FC<CardProps> & {
-  Image: () => JSX.Element;
-  Name: () => JSX.Element;
-  Buttons: () => JSX.Element;
+export type ProductNameProps = {
+  className?: string;
+  style?: CSSProperties;
+};
+
+export type ProductButtonsProps = {
+  className?: string;
+  style?: CSSProperties;
+};
+
+export type ProductCardType = React.FC<CardProductProps> & {
+  Image: FC;
+  Name: FC<ProductNameProps>;
+  Buttons: FC<ProductButtonsProps>;
 };

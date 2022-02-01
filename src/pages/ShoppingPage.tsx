@@ -1,6 +1,6 @@
 import ProductCard from '../components/product';
 import { ProductType } from '../types/ProductType';
-
+import '../styles/custom-styles.css';
 const products: ProductType[] = [
   {
     id: 'b801a022-1870-47ef-b43f-47d406a67399',
@@ -38,10 +38,10 @@ const ShoppingPage = () => {
       <h2>Shopping Page</h2>
       <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
         {products.map((product) => (
-          <ProductCard product={product} key={product.id}>
+          <ProductCard product={product} key={product.id} className='bg-dark'>
             <ProductCard.Image />
-            <ProductCard.Name />
-            <ProductCard.Buttons />
+            <ProductCard.Name className='text-white' />
+            <ProductCard.Buttons className='text-white btn-dark' />
           </ProductCard>
         ))}
       </div>

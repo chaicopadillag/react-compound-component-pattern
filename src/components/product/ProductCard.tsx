@@ -1,10 +1,10 @@
 import { ProductCardProvider } from '../../contexts/productCardContext';
 import useProduct from '../../hooks/useProduct';
 import styles from '../../styles/styles.module.css';
-import { CardProps } from '../../types/ProductType';
+import { CardProductProps } from '../../types/ProductType';
 import { FC } from 'react';
 
-const ProductCard: FC<CardProps> = ({ product, children }) => {
+const ProductCard: FC<CardProductProps> = ({ product, className, children }) => {
   const { counter, increaseBy } = useProduct();
 
   return (
@@ -15,7 +15,7 @@ const ProductCard: FC<CardProps> = ({ product, children }) => {
         product,
       }}
     >
-      <div className={styles.productCard}>{children}</div>
+      <div className={`${styles.productCard} ${className}`}>{children}</div>
     </ProductCardProvider>
   );
 };
