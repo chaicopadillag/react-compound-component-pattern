@@ -5,6 +5,7 @@ type ProductCardContextProps = {
   product: ProductType;
   counter: number;
   increaseBy: (value: number) => void;
+  maxCount?: number;
 };
 
 const productCardContext = createContext<ProductCardContextProps>({} as ProductCardContextProps);

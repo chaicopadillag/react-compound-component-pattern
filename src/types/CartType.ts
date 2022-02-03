@@ -1,4 +1,4 @@
-import { ProductType as ProductType_ } from './ProductType';
+import { InitialValueType, ProductType as ProductType_ } from './ProductType';
 export type ProductType = {
   id: string;
   name: string;
@@ -20,4 +20,5 @@ export type ProductHookProps = {
   product: ProductType_;
   onChange?: (prop: OnChangeCardType) => void;
   count?: number;
+  initialValues?: InitialValueType;
 };
